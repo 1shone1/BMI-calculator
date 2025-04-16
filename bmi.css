@@ -1,0 +1,29 @@
+.welcome {
+        margin: auto;
+        
+        border: 3px solid green;
+        padding: 10px;
+      }
+
+      .calculator{
+
+  text-align: center; 
+  padding: 50px; 
+  background-color: #1b1b1b;
+  box-shadow: #4CAF50;
+}
+.intro{
+  padding: 50px;
+  background-color: #666666; 
+  color: #000000; 
+  border: #1e301c;
+}
+.ROB{
+  padding: 50px; 
+  background-color: #666666; 
+  color: #000000;
+}
+.HOIODB{
+  background-color: #666666; 
+  color: #000;
+}
