@@ -17,3 +17,22 @@
     <a href="#calculator" class="btn btn-success my-3">Go to BMI Calculator</a><br>
     <a href="https://en.wikipedia.org/wiki/Body_mass_index" target="_blank" class="text-info">Learn more about BMI</a>
 </div>
+
+<div class="container my-5">
+    <!-- BMI Calculator -->
+    <div id="calculator" class="text-center">
+        <h2 class="text-primary">BMI Calculator</h2>
+        <div class="d-flex justify-content-center flex-wrap">
+            <input type="number" id="weight" placeholder="Weight in kg" class="form-control m-2" style="width: 200px;">
+            <input type="number" id="height" placeholder="Height in meters" class="form-control m-2" style="width: 200px;">
+            <input type="number" id="age" placeholder="Age" class="form-control m-2" style="width: 200px;">
+            
+            <select name="Sex" id="sex" class="form-select m-2" style="width: 200px;">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <button class="btn btn-success mt-3">Calculate BMI</button>
+        <h3 id="result" class="mt-3 text-info"></h3>
+    </div>
+</div>
