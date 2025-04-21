@@ -4,19 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BMI Calculator</title>
-  <link rel="stylesheet" href="homepage.css">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="homepage.css">  
 </head>
 <body>
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="homepage.html" class="active">BMI Calculator</a>
-    <a href="healthtip.html">Health Tips</a>
-    <a href="about.html">About</a>
-    <a href="feedback.html">Feedback</a>
-    <a href="login .html">Login</a>
-  </div>
-
   <header>
     <h1>BMI Calculator</h1>
     <p>Calculate your Body Mass Index using your height and weight</p>
@@ -34,5 +24,24 @@
     <button onclick="calculateBMI()">Calculate BMI</button>
     <div id="result" class="bmi-result"></div>
   </section>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Step 1</h3>
+        <p>Enter your height and weight in the respective fields.</p>
+      </div>
+      <div class="step">
+        <h3>Step 2</h3>
+        <p>Click the calculate button to get your BMI result.</p>
+      </div>
+      <div class="step">
+        <h3>Step 3</h3>
+        <p>BMI is calculated as weight (kg) divided by height (m) squared.</p>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
