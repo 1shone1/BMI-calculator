@@ -25,3 +25,35 @@
       color: #1e3a8a;
       margin-bottom: 0.5rem;
     }
+    header p {
+      color: #2563eb;
+      font-size: 1.1rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
