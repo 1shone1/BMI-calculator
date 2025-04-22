@@ -96,3 +96,12 @@ button:hover {
 .member:hover {
   transform: scale(1.05);
 }
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #93c5fd;
+  margin: 0 auto 10px;
+}
+
