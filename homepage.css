@@ -81,3 +81,27 @@ button:hover {
   text-align: center;
 }
 
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  text-align: center;
+}
+.member {
+  background: #f0f9ff;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+.member:hover {
+  transform: scale(1.05);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #93c5fd;
+  margin: 0 auto 10px;
+}
+
