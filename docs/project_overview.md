@@ -10,3 +10,8 @@ This is a simple web-based Body Mass Index (BMI) Calculator that allows users to
 - **HTML** – For creating the structure of the calculator form.
 - **CSS** – For styling the layout, input fields, and output display.
 
+## Features
+- Structured form with labeled input fields for height and weight
+- Submit/reset buttons (currently non-functional)
+- Styled layout with responsive design
+- Placeholder or static result section
