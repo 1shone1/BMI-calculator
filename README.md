@@ -22,3 +22,9 @@ A simple and responsive **Body Mass Index (BMI)** calculator built using only HT
 - Paras Jindal(Developer)
 - Ritika Joshi(Developer)
 - Piyush Pahuja(Developer)
+
+## License
+
+This project is a part of Source Code Management Project.
+
+You are free to use, modify, and share it for personal or commercial purposes. No warranty is provided.
