@@ -4,20 +4,113 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BMI Calculator</title>
-  <link rel="stylesheet" href="homepage.css">
-  <link rel="stylesheet" href="nav.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #e0f2fe, #ffffff);
+      color: #333;
+      padding: 20px;
+    }
+    header, footer {
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .calculator, .how-it-works, .team {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #2563eb;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background-color: #1e40af;
+    }
+    .bmi-result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #2563eb;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .step {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .step:hover {
+      transform: scale(1.05);
+    }
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      text-align: center;
+    }
+    .member {
+      background: #f0f9ff;
+      border-radius: 10px;
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+    .member:hover {
+      transform: scale(1.05);
+    }
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #93c5fd;
+      margin: 0 auto 10px;
+    }
+    footer {
+      border-top: 1px solid #ccc;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="homepage.html" class="active">BMI Calculator</a>
-    <a href="healthtip.html">Health Tips</a>
-    <a href="about.html">About</a>
-    <a href="feedback.html">Feedback</a>
-    <a href="login .html">Login</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-
   <header>
     <h1>BMI Calculator</h1>
     <p>Calculate your Body Mass Index using your height and weight</p>
@@ -59,32 +152,51 @@
     <div class="team-members">
       <div class="member">
         <div class="avatar"></div>
-        <h4>Alice</h4>
+        <h4>Somya Sharma</h4>
+        <p>Head Developer</p>
+      </div>
+      <div class="member">
+        <div class="avatar"></div>
+        <h4>Shone</h4>
+        <p>Manager and tester</p>
+      </div>
+      <div class="member">
+        <div class="avatar"></div>
+        <h4>Paras Jindal</h4>
+        
+      </div>
+      <div class="member">
+        <div class="avatar"></div>
+        <h4>Piyush</h4>
         <p>Developer</p>
       </div>
       <div class="member">
         <div class="avatar"></div>
-        <h4>Bob</h4>
-        <p>Developer</p>
-      </div>
-      <div class="member">
-        <div class="avatar"></div>
-        <h4>Charlie</h4>
-        <p>Developer</p>
-      </div>
-
-      <div class="member">
-        <div class="avatar"></div>
-        <h4>Dana</h4>
-        <p>Developer</p>
-      </div>
-      <div class="member">
-        <div class="avatar"></div>
-        <h4>Eli</h4>
-        <p>Developer</p>
+        <h4>ritika</h4>
+        
       </div>
     </div>
   </section>
 
+  <footer>
+    <p>&copy; <span id="year"></span> BMI Calculator. All rights reserved.</p>
+  </footer>
+  <script>
+    function calculateBMI() {
+      const height = document.getElementById("height").value;
+      const weight = document.getElementById("weight").value;
+      if (height > 0 && weight > 0) {
+        const heightInMeters = height / 100;
+        const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
+        document.getElementById("result").innerText = Your BMI is ${bmi};
+      } else {
+        document.getElementById("result").innerText = "Please enter valid height and weight.";
+      }
+    }
+    document.getElementById("year").innerText = new Date().getFullYear();
+  </script>
+
+
+ 
 </body>
 </html>
