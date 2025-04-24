@@ -16,3 +16,9 @@ A simple and responsive **Body Mass Index (BMI)** calculator built using only HT
 - Responsive design for mobile and desktop
 
 
+## Team Members 
+- Shone Dahiya(Manager and Tester)
+- Somya Sharma(Developer)
+- Paras Jindal(Developer)
+- Ritika Joshi(Developer)
+- Piyush Pahuja(Developer)
