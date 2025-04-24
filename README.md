@@ -23,6 +23,12 @@ A simple and responsive **Body Mass Index (BMI)** calculator built using only HT
 - Ritika Joshi(Developer)
 - Piyush Pahuja(Developer)
 
+## Project Overview
+
+The **BMI Calculator** is a lightweight, frontend-only web application designed to help users quickly calculate their Body Mass Index (BMI). Built using HTML, CSS, and JavaScript, it takes user input for height and weight, performs real-time BMI calculation, and displays the result along with the corresponding health category.
+
+This project is ideal for beginners looking to practice DOM manipulation, basic math operations, and responsive UI design. It runs entirely in the browser and requires no backend or external libraries.
+
 ## License
 
 This project is a part of Source Code Management Project.
