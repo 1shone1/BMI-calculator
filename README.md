@@ -29,6 +29,14 @@ The **BMI Calculator** is a lightweight, frontend-only web application designed 
 
 This project is ideal for beginners looking to practice DOM manipulation, basic math operations, and responsive UI design. It runs entirely in the browser and requires no backend or external libraries.
 
+---
+
+## Future Enhancements
+- Add unit toggle (kg/lb, cm/inch)
+- Include visual indicators (color-coded results)
+- Save user history with localStorage
+- Dark mode toggle
+
 ## License
 
 This project is a part of Source Code Management Project.
