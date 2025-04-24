@@ -19,7 +19,7 @@ This is a simple web-based Body Mass Index (BMI) Calculator that allows users to
 ## How It Works
 Since no JavaScript is used, the calculator is static. It serves as a front-end shell that can later be connected to backend logic or client-side scripting for full functionality.
 
-##Future Enhancements
+## Future Enhancements
  Add JavaScript for actual BMI calculations
 - Input validation
 - Result categorization (Underweight, Normal, Overweight, Obese)
