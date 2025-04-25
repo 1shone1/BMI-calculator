@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <!-- Embedded CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header hr {
+            width: 50%;
+            margin: 10px auto;
+            border-top: 2px solid #fff;
+        }
+        .header a {
+            color: #0dcaf0;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 200px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            background-color: #198754;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: not-allowed;
+        }
+
+        h2, h3 {
+            color: #0d6efd;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Section -->
+    <div class="header">
+        <h1>Welcome to the BMI Calculator</h1>
+        <hr>
+        <p>Calculate your Body Mass Index (BMI) to assess your weight status.</p>
+        <a href="#calculator"><button class="btn">Go to BMI Calculator</button></a><br><br>
+        <a href="https://en.wikipedia.org/wiki/Body_mass_index" target="_blank">Learn more about BMI</a>
+    </div>
+
+    
+    <!-- BMI Calculator Section -->
+    <div class="container text-center" id="calculator">
+        <h2>BMI Calculator</h2>
+        <div class="form-group">
+            <input type="number" placeholder="Weight in kg">
+            <input type="number" placeholder="Height in meters">
+            <input type="number" placeholder="Age">
+            <select>
+                <option value="">Select Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <button class="btn" disabled>Calculate BMI (Static)</button>
+        <h3>Your BMI will appear here</h3>
+    </div>
+
+    <!-- What is BMI Section -->
+    <div class="container text-center">
+        <h2>What is BMI?</h2>
+        <p>BMI, or Body Mass Index, is a measure that uses height and weight to assess whether a person has a healthy body weight for their height.</p>
+        <h3>Importance of BMI</h3>
+        <p>It helps assess health risks associated with being overweight or underweight.</p>
+    </div>
+
+    <!-- Risks Section -->
+    <div class="container text-center">
+        <h2>Risks of Being Overweight or Underweight</h2>
+
+        <h3>Underweight Risks:</h3>
+        <ul>
+            <li>Malnutrition</li>
+            <li>Weakened immune system</li>
+            <li>Osteoporosis</li>
+            <li>Fertility issues</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BMI Calculator. All rights reserved.</p>
+    <footer>
+
+</body>
+</html>
+
+
+
+
