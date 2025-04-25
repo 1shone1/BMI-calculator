@@ -1,61 +1,86 @@
-.contactus{
-    padding: 50px;
-    text-align: center;
-    background-color: #06080e;
-    color:rgb(68, 143, 49);
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
 }
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Style inputs */
-  input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-  
-  input[type=submit] {
-    background-color: #0a7783;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color:darkorange;
-  }
-  
-  /* Style the container/contact section */
-  .container {
-    border-radius: 5px;
-    background-color: rgb(41,41, 41);
-    padding: 10px;
-  }
-  
-  /* Create two columns that float next to eachother */
-  .column {
-    float: center;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  gap: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4b5563;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+}
+
+.contactus h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contactus p {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+}
+
+label {
+  font-weight: 500;
+  color: #374151;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+input[type="submit"] {
+  background-color: #6366f1;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #4f46e5;
+}
