@@ -110,7 +110,38 @@
     }
   </style>
 </head>
+\<style>
+  .navbar {
+    background-color: #1e3a8a;
+    padding: 10px 0;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+
 <body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contactpage.html">Contact</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="healthtip.html">Health Tips</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  
   <header>
     <h1>BMI Calculator</h1>
     <p>Calculate your Body Mass Index using your height and weight</p>
@@ -163,7 +194,7 @@
       <div class="member">
         <div class="avatar"></div>
         <h4>Paras Jindal</h4>
-        
+        <p>devloper</p>
       </div>
       <div class="member">
         <div class="avatar"></div>
@@ -173,6 +204,7 @@
       <div class="member">
         <div class="avatar"></div>
         <h4>ritika</h4>
+        <p>devloper</p>
         
       </div>
     </div>
@@ -181,21 +213,26 @@
   <footer>
     <p>&copy; <span id="year"></span> BMI Calculator. All rights reserved.</p>
   </footer>
+ 
+  
   <script>
     function calculateBMI() {
       const height = document.getElementById("height").value;
       const weight = document.getElementById("weight").value;
+  
       if (height > 0 && weight > 0) {
         const heightInMeters = height / 100;
         const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
-        document.getElementById("result").innerText = Your BMI is ${bmi};
+        document.getElementById("result").innerText = `Your BMI is ${bmi}`;
       } else {
         document.getElementById("result").innerText = "Please enter valid height and weight.";
       }
     }
+  
     document.getElementById("year").innerText = new Date().getFullYear();
   </script>
 
+  
 
  
 </body>
