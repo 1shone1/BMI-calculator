@@ -1,30 +1,69 @@
 .navbar {
-    background-color: #333;
-    overflow: hidden;
-    position: fixed;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
 }
 
-.navbar a {
-    float: left;
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
     color: white;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-    transition: background-color 0.3s;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
-.navbar a.active {
-    background-color: #4CAF50;
-    color: white;
+.nav-links li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
 }
 
 /* Add padding to body to prevent content from hiding behind navbar */
