@@ -1,68 +1,70 @@
-<html>
-    <head>
-        <title>feedback</title>
-        <link rel="icon" href="D:\pranav\html\html\favicon-16x16.png" type="image/x-icon">
-        <link rel="stylesheet" href="feedback.css">
-        <link rel="stylesheet" href="nav.css">
-    </head>
-    <body>
-        <style>
-            .navbar {
-              background-color: #1e3a8a;
-              padding: 10px 0;
-            }
-        
-            .nav-links {
-              display: flex;
-              justify-content: center;
-              list-style: none;
-              gap: 25px;
-            }
-        
-            .nav-links li a {
-              color: white;
-              text-decoration: none;
-              font-weight: bold;
-            }
-          </style>
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="homepage.html">BMI Calculator</a>
-            <a href="healthtip.html">Health Tips</a>
-            <a href="about.html">About</a>
-            <a href="feedback.html" class="active">Feedback</a>
-            <a href="login .html">Login</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div class="container">
-            <div class="contactus" style="text-align:center">
-              <h2>Contact Us</h2>
-              <p>Swing by for a cup of coffee, or leave us a message:</p>
-            </div>
-                <div class="column">
-            
-                    <form action="/action_page.php">
-                        <table>
-                          <tr>
-                            <th><label for="fname">First Name</label></th>
-                            <td><input type="text" id="fname" name="firstname" placeholder="Your name.."></td>
-                          </tr>
-                          <tr>
-                            <th><label for="lname">Last Name</label></th>
-                            <td><input type="text" id="lname" name="lastname" placeholder="Your last name.."></td>
-                          </tr>
-                          <tr>
-                            <th><label for="subject">Subject</label></th>
-                            <td><textarea id="subject" name="subject" placeholder="Write something.."></textarea></td>
-                          </tr>
-                          <tr>
-                            <td colspan="2"><input type="submit" value="Submit"></td>
-                          </tr>
-                        </table>
-                      </form>
-                      
-                </div>
-            </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback</title>
+  <link rel="icon" href="D:\pranav\html\html\favicon-16x16.png" type="image/x-icon">
+  
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="feedback.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="homepage.html">BMI Calculator</a>
+    <a href="healthtip.html">Health Tips</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html" class="active">Feedback</a>
+    <a href="login.html">Login</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Feedback Form -->
+  <div class="container">
+    <h2>We Value Your Feedback!</h2>
+
+    <form action="/submit_feedback.php" method="post">
+      <!-- Rating Section -->
+      <div class="stars" id="rating">
+        <span data-value="1">&#9733;</span>
+        <span data-value="2">&#9733;</span>
+        <span data-value="3">&#9733;</span>
+        <span data-value="4">&#9733;</span>
+        <span data-value="5">&#9733;</span>
+      </div>
+
+      <!-- Hidden input to store rating -->
+      <input type="hidden" id="ratingValue" name="rating" value="">
+
+      <!-- Feedback text -->
+      <textarea name="feedback" placeholder="Write your feedback here..."></textarea>
+
+      <!-- Submit button -->
+      <input type="submit" value="Submit Feedback">
+    </form>
+  </div>
+
+  <!-- Javascript for selecting stars -->
+  <script>
+    const stars = document.querySelectorAll('.stars span');
+    const ratingValue = document.getElementById('ratingValue');
+
+    stars.forEach(star => {
+      star.addEventListener('click', function() {
+        const rating = this.getAttribute('data-value');
+        ratingValue.value = rating;
+
+        stars.forEach(s => s.classList.remove('selected'));
+        for (let i = 0; i < rating; i++) {
+          stars[i].classList.add('selected');
+        }
+      });
+    });
+  </script>
+
+</body>
 </html>
