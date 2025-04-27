@@ -232,18 +232,14 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="homepage.html" class="active">BMI Calculator</a></li>
-      <li><a href="healthtip.html">Health Tips</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="feedback.html">Feedback</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="contactpage.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
   
   <header>
     <div class="container">
@@ -355,7 +351,7 @@
         <a href="privacy.html">Privacy Policy</a>
         <a href="contactpage.html">Contact Us</a>
         <a href="about.html">About</a>
-      </div>
+    </div>
     </div>
   </footer>
  
