@@ -1,86 +1,85 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9fafb;
-  color: #1a1a1a;
-  margin: 0;
-  padding: 0;
-}
-
+/* Navbar Styling */
 .navbar {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  display: flex;
-  justify-content: center;
-  padding: 12px;
-  gap: 15px;
+  background-color: #1e3a8a;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .navbar a {
+  color: white;
+  margin: 0 15px;
   text-decoration: none;
-  color: #4b5563;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: background-color 0.2s;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.navbar a:hover,
-.navbar a.active {
-  background-color: #e0e7ff;
-  color: #4338ca;
+.navbar a:hover {
+  color: #93c5fd;
 }
 
+.navbar .active {
+  border-bottom: 2px solid white;
+}
+
+/* Container Styling */
 .container {
-  max-width: 700px;
+  max-width: 600px;
   margin: 40px auto;
-  background-color: #ffffff;
   padding: 30px;
+  background: #f9fafb;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.contactus h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+h2 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
 }
 
-.contactus p {
-  color: #6b7280;
-  margin-bottom: 30px;
+/* Rating stars */
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-table {
-  width: 100%;
+.stars span {
+  color: gray;
+  transition: color 0.3s;
 }
 
-label {
-  font-weight: 500;
-  color: #374151;
+.stars span:hover,
+.stars span.selected {
+  color: gold;
 }
 
-input[type="text"],
+/* Feedback textarea */
 textarea {
   width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  border: 1px solid #d1d5db;
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 1rem;
-  background-color: #f3f4f6;
-  color: #111827;
+  height: 120px;
+  resize: none;
+  margin-bottom: 20px;
 }
 
+/* Submit button */
 input[type="submit"] {
-  background-color: #6366f1;
+  background-color: #2563eb;
   color: white;
-  padding: 12px 24px;
   border: none;
+  padding: 10px 20px;
   border-radius: 8px;
-  font-size: 1rem;
   cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 16px;
 }
 
 input[type="submit"]:hover {
-  background-color: #4f46e5;
+  background-color: #1e40af;
 }
