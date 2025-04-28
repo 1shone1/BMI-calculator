@@ -295,6 +295,43 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .page-links {
+      padding: 60px 0;
+      background: #f8fafc;
+    }
+    .link-box {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .link-box:hover {
+      transform: translateY(-5px);
+    }
+    .link-item {
+      text-decoration: none;
+      color: #1e3a8a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .link-item i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #2563eb;
+    }
+    .link-item span {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .page-links {
+        padding: 30px 0;
+      }
+    }
   </style>
 </head>
 
@@ -359,6 +396,69 @@
       </div>
     </section>
 
+    <section class="page-links">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="link-box">
+              <a href="index.html" class="link-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="link-box">
+              <a href="healthtip.html" class="link-item">
+                <i class="fas fa-heartbeat"></i>
+                <span>Health Tips</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="link-box">
+              <a href="about.html" class="link-item">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="link-box">
+              <a href="feedback.html" class="link-item">
+                <i class="fas fa-comment-alt"></i>
+                <span>Feedback</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="link-box">
+              <a href="login.html" class="link-item">
+                <i class="fas fa-user"></i>
+                <span>Login</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="link-box">
+              <a href="privacy.html" class="link-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Privacy Policy</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="link-box">
+              <a href="contactpage.html" class="link-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="team">
       <h2>Meet Our Team</h2>
       <div class="team-members">
@@ -407,47 +507,6 @@
             <a href="#"><i class="fab fa-github"></i></a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="quick-links">
-      <h2>Quick Links</h2>
-      <div class="link-grid">
-        <a href="index.html" class="link-card">
-          <i class="fas fa-home"></i>
-          <h3>Home</h3>
-          <p>Return to the main page</p>
-        </a>
-        <a href="healthtip.html" class="link-card">
-          <i class="fas fa-heartbeat"></i>
-          <h3>Health Tips</h3>
-          <p>Get valuable health advice</p>
-        </a>
-        <a href="about.html" class="link-card">
-          <i class="fas fa-info-circle"></i>
-          <h3>About Us</h3>
-          <p>Learn more about our mission</p>
-        </a>
-        <a href="feedback.html" class="link-card">
-          <i class="fas fa-comment-alt"></i>
-          <h3>Feedback</h3>
-          <p>Share your thoughts with us</p>
-        </a>
-        <a href="login.html" class="link-card">
-          <i class="fas fa-user"></i>
-          <h3>Login</h3>
-          <p>Access your account</p>
-        </a>
-        <a href="privacy.html" class="link-card">
-          <i class="fas fa-shield-alt"></i>
-          <h3>Privacy Policy</h3>
-          <p>Read our privacy terms</p>
-        </a>
-        <a href="contactpage.html" class="link-card">
-          <i class="fas fa-envelope"></i>
-          <h3>Contact Us</h3>
-          <p>Get in touch with our team</p>
-        </a>
       </div>
     </section>
   </div>
