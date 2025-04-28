@@ -57,15 +57,42 @@
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
     .tip-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
+
+    .tip-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #1976d2;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .tip-card:hover::after {
+      transform: scaleX(1);
+    }
+
     .tip-card h3 {
       color: #1976d2;
       margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #e3f2fd;
+      border-left: 4px solid #1976d2;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 0 8px 8px 0;
     }
 
     /* BMI Mechanism */
@@ -135,6 +162,32 @@
 
     footer a:hover {
       color: white;
+    }
+
+    .quick-tips {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+
+    .quick-tips h3 {
+      color: #1976d2;
+      margin-bottom: 15px;
+    }
+
+    .quick-tips ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .quick-tips li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .quick-tips li:last-child {
+      border-bottom: none;
     }
 
     @media (max-width: 600px) {
@@ -235,10 +288,27 @@
       </div>
     </div>
 
+    <div class="quick-tips">
+      <h3>Quick Health Tips</h3>
+      <ul>
+        <li>🍎 Start your day with a healthy breakfast</li>
+        <li>💧 Keep a water bottle with you at all times</li>
+        <li>🚶 Take the stairs instead of the elevator</li>
+        <li>🥗 Fill half your plate with vegetables</li>
+        <li>😴 Set a consistent bedtime routine</li>
+        <li>🧘 Take 5-minute breaks for stretching</li>
+        <li>📱 Limit screen time before bed</li>
+        <li>🥤 Replace sugary drinks with water or herbal tea</li>
+      </ul>
+    </div>
+
     <div class="mechanism">
       <h3>Understanding Your BMI</h3>
+      <div class="highlight">
+        <p>BMI is a simple way to check if your weight is healthy for your height.</p>
+      </div>
       <p>
-        BMI (Body Mass Index) is a number calculated using your weight and height:
+        BMI (Body Mass Index) is calculated using your weight and height:
         <strong>BMI = weight (kg) / height² (m²)</strong>
       </p>
       <p>BMI Categories:</p>
@@ -248,7 +318,9 @@
         <li>Overweight: 25 – 29.9</li>
         <li>Obese: BMI ≥ 30</li>
       </ul>
-      <p class="highlight">Remember: BMI is a screening tool, not a diagnostic tool. Consult with healthcare professionals for personalized advice.</p>
+      <div class="highlight">
+        <p>Remember: BMI is a screening tool, not a diagnostic tool. Consult with healthcare professionals for personalized advice.</p>
+      </div>
     </div>
     <footer>
       <p>&copy; 2025 BMI Calculator. All rights reserved. | <a href="#">Privacy Policy</a></p>
