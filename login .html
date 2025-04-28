@@ -25,25 +25,22 @@
     }
 
     .navbar {
-      width: 100%;
       background-color: #1e3a8a;
       padding: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      font-size: 18px;
+      font-size: 18px; /* Correct text size */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Added shadow */
     }
 
     .navbar a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s ease;
+      margin: 0 15px;
+      transition: color 0.3s;
     }
 
     .navbar a:hover {
-      color: #d1d5db;
+      color: #cbd5e0; /* light gray on hover */
     }
 
     h1 {
@@ -160,14 +157,17 @@
 <body>
 
   <div class="navbar">
+   <!-- Navbar -->
+  <div class="navbar">
     <a href="index.html">Home</a>
     <a href="homepage.html">BMI Calculator</a>
     <a href="healthtip.html">Health Tips</a>
-    <a href="about.html">About</a>
+    <a href="about.html" class="active">About</a>
     <a href="feedback.html">Feedback</a>
-    <a href="login.html" class="active">Login</a> <!-- Fixed the extra space in filename -->
-    <a href="privacy.html">Privacy Policy</a>
+    <a href="login .html">Login</a>
+    <a href="privacypolicy.html">Privacy Policy</a>
     <a href="contact.html">Contact</a>
+  </div>
   </div>
 
   <h1>BMI Calculator Login</h1>
