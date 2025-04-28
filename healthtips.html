@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tips - BMI Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #cfe9ff, #a3d1ff);
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: transparent;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #2563eb;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tip-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-card h3 {
+            color: #1e3a8a;
+            margin-top: 0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .tip-card p {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .tip-card ul {
+            padding-left: 1.5rem;
+            color: #4b5563;
+        }
+
+        .tip-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background-color: #f0f9ff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Health & Wellness Tips</h1>
+        <p>Your guide to a healthier lifestyle</p>
+    </header>
+
+    <div class="container">
+        <div class="tips-grid">
+            <div class="tip-card">
+                <h3>Nutrition Basics</h3>
+                <div class="highlight">
+                    <p>Remember: A balanced diet is key to maintaining a healthy BMI.</p>
+                </div>
+                <ul>
+                    <li>Eat plenty of fruits and vegetables</li>
+                    <li>Choose whole grains over refined grains</li>
+                    <li>Include lean proteins in your diet</li>
+                    <li>Limit processed foods and added sugars</li>
+                    <li>Stay hydrated with water</li>
+                </ul>
+            </div>
+
+            <div class="tip-card">
+                <h3>Exercise Guidelines</h3>
+                <div class="highlight">
+                    <p>Aim for at least 150 minutes of moderate exercise weekly.</p>
+                </div>
+                <ul>
+                    <li>Start with 30 minutes of walking daily</li>
+                    <li>Include strength training 2-3 times per week</li>
+                    <li>Try different activities to stay motivated</li>
+                    <li>Listen to your body and rest when needed</li>
+                    <li>Make exercise a social activity</li>
+                </ul>
+            </div>
+
+            <div class="tip-card">
+                <h3>Sleep & Recovery</h3>
+                <div class="highlight">
+                    <p>Quality sleep is essential for overall health and weight management.</p>
+                </div>
+                <ul>
+                    <li>Aim for 7-9 hours of sleep nightly</li>
+                    <li>Maintain a consistent sleep schedule</li>
+                    <li>Create a relaxing bedtime routine</li>
+                    <li>Limit screen time before bed</li>
+                    <li>Keep your bedroom cool and dark</li>
+                </ul>
+            </div>
+
+            <div class="tip-card">
+                <h3>Stress Management</h3>
+                <div class="highlight">
+                    <p>Managing stress is crucial for maintaining a healthy lifestyle.</p>
+                </div>
+                <ul>
+                    <li>Practice deep breathing exercises</li>
+                    <li>Try meditation or mindfulness</li>
+                    <li>Stay connected with friends and family</li>
+                    <li>Take regular breaks during work</li>
+                    <li>Engage in hobbies you enjoy</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> BMI Calculator. All rights reserved.</p>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contactpage.htmll.html">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html> 
