@@ -1,31 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BMI Calculator  Privacy Policy </title>
+  <title>BMI Calculator Privacy Policy</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom right, #ebf8ff, #ffffff);
-      color: #2c3e50;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e6e6fa, #ffffff);
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #7c3aed; /* Purple shade */
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      font-size: 18px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #d8b4fe;
+    }
+
     header {
       text-align: center;
       padding: 2rem 1rem;
     }
+
     header h1 {
-      font-size: 2.5rem;
-      color: #2b6cb0;
+      font-size: 2.8rem;
+      color: #7c3aed;
       margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 2px #ccc;
     }
+
     header p {
       color: #4a5568;
       max-width: 600px;
       margin: 0 auto;
+      font-size: 1.1rem;
     }
+
     main {
       display: grid;
       grid-template-columns: 1fr;
@@ -34,50 +71,112 @@
       margin: 2rem auto;
       padding: 0 1rem;
     }
+
     @media(min-width: 768px) {
       main {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
     .card {
       background: white;
       border-radius: 1rem;
       padding: 1.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: box-shadow 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
+
     .card h2 {
-      color: #2b6cb0;
+      color: #7c3aed;
       margin-bottom: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
+
     .card p {
       color: #4a5568;
       line-height: 1.6;
+      font-size: 1rem;
     }
+
     .formula {
-      background: #ebf8ff;
+      background: #f3e8ff;
       font-family: monospace;
       padding: 0.5rem;
       border-radius: 0.5rem;
       display: inline-block;
       margin-bottom: 1rem;
     }
+
     footer {
       text-align: center;
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       color: #718096;
       padding: 2rem 1rem;
+      margin-top: auto;
     }
+
     footer hr {
       margin-bottom: 1rem;
       border: none;
       border-top: 1px solid #e2e8f0;
     }
+
     .heart {
       color: #e53e3e;
     }
-    </style>
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="homepage.html">BMI Calculator</a>
+    <a href="healthtip.html">Health Tips</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="login.html">Login</a>
+    <a href="privacy.html" class="active">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>Your privacy is important to us. Learn how we collect, use, and protect your information.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Information Collection</h2>
+      <p>We collect minimal information necessary for providing accurate BMI calculations and personalized advice. No sensitive personal data is collected without consent.</p>
+    </div>
+
+    <div class="card">
+      <h2>Data Usage</h2>
+      <p>Your data is solely used for improving your experience on the BMI Calculator platform. We do not sell or share your information with third parties.</p>
+    </div>
+
+    <div class="card">
+      <h2>Cookies</h2>
+      <p>Our site may use basic cookies to enhance functionality. You can choose to disable cookies via your browser settings without affecting major features.</p>
+    </div>
+
+    <div class="card">
+      <h2>Security</h2>
+      <p>We implement strict measures to protect your information from unauthorized access and misuse.</p>
+    </div>
+  </main>
+
+  <footer>
+    <hr />
+    Made with <span class="heart">&hearts;</span> by BMI Calculator Team | &copy; 2025 All rights reserved.
+  </footer>
+
+</body>
+
+</html>
