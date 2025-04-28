@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator - Frequently Asked Questions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .faq-header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .question {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            color: #555;
+        }
+
+        .back-to-calculator {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #2c3e50
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-calculator:hover {
+            background-color: #34495e;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .faq-header {
+                padding: 20px 0;
+            }
+
+            .question {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-header">
+        <h1>BMI Calculator FAQ</h1>
+        <p>Frequently Asked Questions about BMI Calculation and Usage</p>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="question">What is BMI?</div>
+            <div class="answer">
+                BMI (Body Mass Index) is a simple measurement using your weight and height to work out if your weight is healthy. The BMI calculation divides an adult's weight in kilograms by their height in meters squared.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">How is BMI calculated?</div>
+            <div class="answer">
+                BMI is calculated using the formula: BMI = weight (kg) ÷ height² (m²). For example, if you weigh 70kg and are 1.75m tall, your BMI would be 70 ÷ (1.75 × 1.75) = 22.9.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">What are the BMI categories?</div>
+            <div class="answer">
+                The standard BMI categories for adults are:<br>
+                • Underweight: Below 18.5<br>
+                • Normal weight: 18.5 to 24.9<br>
+                • Overweight: 25 to 29.9<br>
+                • Obese: 30 or greater
+            <div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Is BMI accurate for everyone?</div>
+            <div class="answer">
+                BMI is not a perfect measure as it doesn't account for factors like muscle mass, bone density, age, sex, ethnicity, and body composition. Athletes or muscular individuals might have a high BMI but not be overweight. It's best to use BMI as one of several indicators of health.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question">How often should I check my BMI?</div>
+            <div class="answer">
+                It's recommended to check your BMI whenever there are significant changes in your weight or every 6-12 months as part of your regular health check-up. However, rapid or frequent changes in BMI should be discussed with a healthcare provider.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Can children use this BMI calculator?</div>
+            <div class="answer">
+                This calculator is designed for adults. Children and teens should use a specific BMI calculator that takes into account their age and gender, as their body composition changes significantly during development. Please consult a pediatrician for children's BMI assessment.
+            </div>
+        </div>
+
+        <a href="index.html" class="back-to-calculator">Back to Calculator<a>
+    </div>
+</body>
+</html>

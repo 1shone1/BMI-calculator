@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BMI Calculator</title>
+  <title>BMI Calculator - Your Health Companion</title>
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -11,191 +13,475 @@
       padding: 0;
     }
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #e0f2fe, #ffffff);
-      color: #333;
-      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+      color: #2d3748;
+      line-height: 1.6;
     }
-    header, footer {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
       text-align: center;
-      padding: 20px;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+      opacity: 0.1;
     }
     h1 {
-      font-size: 2.5rem;
-      color: #1e3a8a;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      position: relative;
     }
-    p {
+    h2 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+      font-size: 2.2rem;
+      text-align: center;
+    }
+    .hero-text {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: #1e3a8a;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 60px 0;
+    }
+    .feature-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #2563eb;
       margin-bottom: 20px;
     }
-    .calculator, .how-it-works, .team {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    input[type="number"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    button {
-      background-color: #2563eb;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-    button:hover {
-      background-color: #1e40af;
-    }
-    .bmi-result {
-      margin-top: 20px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #2563eb;
+    .how-it-works {
+      background: white;
+      border-radius: 15px;
+      padding: 60px 40px;
+      margin: 60px auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     .steps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
     .step {
-      background: #f1f5f9;
-      padding: 15px;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      position: relative;
+    }
+    .step-number {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #2563eb;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
     }
     .step:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .step h3 {
+      color: #2563eb;
+      margin: 15px 0;
+    }
+    .team {
+      background: white;
+      border-radius: 15px;
+      padding: 60px 40px;
+      margin: 60px auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     .team-members {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-      text-align: center;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
     .member {
-      background: #f0f9ff;
-      border-radius: 10px;
-      padding: 15px;
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
       transition: transform 0.3s ease;
     }
     .member:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
     }
     .avatar {
-      width: 80px;
-      height: 80px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      background-color: #93c5fd;
-      margin: 0 auto 10px;
+      background: linear-gradient(135deg, #93c5fd, #60a5fa);
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .social-links {
+      margin-top: 15px;
+    }
+    .social-links a {
+      color: #2563eb;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #1e40af;
     }
     footer {
-      border-top: 1px solid #ccc;
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: #93c5fd;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      .how-it-works, .team {
+        padding: 30px 20px;
+      }
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+    .quick-links {
+      background: white;
+      border-radius: 15px;
+      padding: 60px 40px;
+      margin: 60px auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .quick-links h2 {
+      color: #1e3a8a;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .link-card {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #2d3748;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .link-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      background: #eef2ff;
+    }
+
+    .link-card i {
+      font-size: 2.5rem;
+      color: #2563eb;
+      margin-bottom: 15px;
+    }
+
+    .link-card h3 {
+      color: #1e3a8a;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .link-card p {
+      color: #64748b;
       font-size: 0.9rem;
-      color: #555;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .quick-links {
+        padding: 30px 20px;
+      }
+      
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
+  
   <header>
-    <h1>BMI Calculator</h1>
-    <p>Calculate your Body Mass Index using your height and weight</p>
+    <div class="container">
+      <h1>Your Health Journey Starts Here</h1>
+      <p class="hero-text">Calculate your BMI and take the first step towards a healthier lifestyle. Our easy-to-use calculator helps you understand your body mass index and provides personalized health insights.</p>
+      <a href="#how-it-works" class="cta-button">Get Started</a>
+    </div>
   </header>
 
-  <section class="calculator">
-    <div class="form-group">
-      <label for="height">Height (cm)</label>
-      <input type="number" id="height" />
-    </div>
-    <div class="form-group">
-      <label for="weight">Weight (kg)</label>
-      <input type="number" id="weight" />
-    </div>
-    <button onclick="calculateBMI()">Calculate BMI</button>
-    <div id="result" class="bmi-result"></div>
-  </section>
+  <div class="container">
+    <section class="features">
+      <div class="feature-card">
+        <i class="fas fa-calculator feature-icon"></i>
+        <h3>Easy Calculation</h3>
+        <p>Quick and accurate BMI calculation with instant results</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-chart-line feature-icon"></i>
+        <h3>Track Progress</h3>
+        <p>Monitor your health journey with detailed insights</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-heartbeat feature-icon"></i>
+        <h3>Health Tips</h3>
+        <p>Get personalized health recommendations based on your BMI</p>
+      </div>
+    </section>
 
-  <section class="how-it-works">
-    <h2>How It Works</h2>
-    <div class="steps">
-      <div class="step">
-        <h3>Step 1</h3>
-        <p>Enter your height and weight in the respective fields.</p>
+    <section id="how-it-works" class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <i class="fas fa-user-edit" style="font-size: 2rem; color: #2563eb;"></i>
+          <h3>Enter Your Details</h3>
+          <p>Input your height, weight, and other relevant information</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <i class="fas fa-calculator" style="font-size: 2rem; color: #2563eb;"></i>
+          <h3>Calculate BMI</h3>
+          <p>Our system processes your information instantly</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <i class="fas fa-chart-pie" style="font-size: 2rem; color: #2563eb;"></i>
+          <h3>Get Results</h3>
+          <p>Receive detailed analysis and health recommendations</p>
+        </div>
       </div>
-      <div class="step">
-        <h3>Step 2</h3>
-        <p>Click the calculate button to get your BMI result.</p>
-      </div>
-      <div class="step">
-        <h3>Step 3</h3>
-        <p>BMI is calculated as weight (kg) divided by height (m) squared.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="team">
-    <h2>Meet the Team</h2>
-    <div class="team-members">
-      <div class="member">
-        <div class="avatar"></div>
-        <h4>Somya Sharma</h4>
-        <p>Head Developer</p>
+    <section class="team">
+      <h2>Meet Our Team</h2>
+      <div class="team-members">
+        <div class="member">
+          <div class="avatar">SS</div>
+          <h4>Somya Sharma</h4>
+          <p>Head Developer</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="member">
+          <div class="avatar">S</div>
+          <h4>Shone</h4>
+          <p>Manager and Tester</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="member">
+          <div class="avatar">PJ</div>
+          <h4>Paras Jindal</h4>
+          <p>Developer</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="member">
+          <div class="avatar">P</div>
+          <h4>Piyush</h4>
+          <p>Developer</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="member">
+          <div class="avatar">R</div>
+          <h4>Ritika</h4>
+          <p>Developer</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="member">
-        <div class="avatar"></div>
-        <h4>Shone</h4>
-        <p>Manager and tester</p>
+    </section>
+
+    <section class="quick-links">
+      <h2>Quick Links</h2>
+      <div class="link-grid">
+        <a href="index.html" class="link-card">
+          <i class="fas fa-home"></i>
+          <h3>Home</h3>
+          <p>Return to the main page</p>
+        </a>
+        <a href="healthtip.html" class="link-card">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Health Tips</h3>
+          <p>Get valuable health advice</p>
+        </a>
+        <a href="about.html" class="link-card">
+          <i class="fas fa-info-circle"></i>
+          <h3>About Us</h3>
+          <p>Learn more about our mission</p>
+        </a>
+        <a href="feedback.html" class="link-card">
+          <i class="fas fa-comment-alt"></i>
+          <h3>Feedback</h3>
+          <p>Share your thoughts with us</p>
+        </a>
+        <a href="login.html" class="link-card">
+          <i class="fas fa-user"></i>
+          <h3>Login</h3>
+          <p>Access your account</p>
+        </a>
+        <a href="privacy.html" class="link-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Privacy Policy</h3>
+          <p>Read our privacy terms</p>
+        </a>
+        <a href="contactpage.html" class="link-card">
+          <i class="fas fa-envelope"></i>
+          <h3>Contact Us</h3>
+          <p>Get in touch with our team</p>
+        </a>
       </div>
-      <div class="member">
-        <div class="avatar"></div>
-        <h4>Paras Jindal</h4>
-        
-      </div>
-      <div class="member">
-        <div class="avatar"></div>
-        <h4>Piyush</h4>
-        <p>Developer</p>
-      </div>
-      <div class="member">
-        <div class="avatar"></div>
-        <h4>ritika</h4>
-        
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <footer>
-    <p>&copy; <span id="year"></span> BMI Calculator. All rights reserved.</p>
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> BMI Calculator. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contactpage.html">Contact Us</a>
+        <a href="about.html">About</a>
+    </div>
+    </div>
   </footer>
+ 
+  
   <script>
     function calculateBMI() {
       const height = document.getElementById("height").value;
       const weight = document.getElementById("weight").value;
+  
       if (height > 0 && weight > 0) {
         const heightInMeters = height / 100;
         const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
-        document.getElementById("result").innerText = Your BMI is ${bmi};
+        document.getElementById("result").innerText = `Your BMI is ${bmi}`;
       } else {
         document.getElementById("result").innerText = "Please enter valid height and weight.";
       }
     }
+  
     document.getElementById("year").innerText = new Date().getFullYear();
   </script>
 
+  
 
  
 </body>
