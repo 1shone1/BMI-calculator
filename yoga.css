@@ -103,7 +103,31 @@
       color: #1976d2;
       margin-bottom: 10px;
     }
-
+     /* Footer */
+     footer {
+        background: #1976d2;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+        margin-top: 40px;
+      }
+  
+      footer a {
+        color: #bbdefb;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+  
+      footer a:hover {
+        color: white;
+      }
+  
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+      }
+  
     
 
     
