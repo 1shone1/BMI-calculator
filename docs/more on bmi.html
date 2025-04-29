@@ -1,163 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator</title>
-    <!-- Embedded CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            margin: 0
-            padding: 0;
-            background-color: #f8f9fa;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
 
-        .header {
-            background-color: #212529;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+    .navbar {
+      background-color: #212529;
+      padding: 15px 0;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
 
-        .header hr {
-            width: 50%;
-            margin: 10px auto;
-            border-top: 2px solid #fff;
-        }
-        .header a {
-            color: #0dcaf0;
-            text-decoration: none;
-        }
+    .navbar a {
+      color: #0dcaf0;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 12px;
+      transition: color 0.3s ease;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+    .navbar a:hover {
+      color: #fff;
+    }
 
-        .text-center {
-            text-align: center;
-        }
+    .header {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
 
-        .form-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
+    .header hr {
+      width: 50%;
+      margin: 10px auto;
+      border-top: 2px solid #fff;
+    }
 
-        .form-group input,
-        .form-group select {
-            width: 200px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+    .header a {
+      color: #0dcaf0;
+      text-decoration: none;
+    }
 
-        .btn {
-            background-color: #198754;
-            color: white;
-            padding: 10px 20px;
-            margin-top: 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: not-allowed;
-        }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
 
-        h2, h3 {
-            color: #0d6efd;
-        }
+    .text-center {
+      text-align: center;
+    }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
 
-        footer {
-            background-color: #212529;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+    .form-group input,
+    .form-group select {
+      width: 200px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
 
-    </style>
+    .btn {
+      background-color: #198754;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #157347;
+    }
+
+    h2, h3 {
+      color: #0d6efd;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar" style="background:#212529; padding:10px 0;">
-        <ul class="nav-links" style="display:flex; justify-content:center; gap:20px; list-style:none; margin:0; padding:0;">
-            <li><a href="../index.html" style="color:#0dcaf0; text-decoration:none;">Home</a></li>
-            <li><a href="../index.html#calculator" style="color:#0dcaf0; text-decoration:none;">BMI Calculator</a></li>
-            <li><a href="more on bmi.html" style="color:#0dcaf0; text-decoration:none;">More on BMI</a></li>
-            <li><a href="healthtip.html" style="color:#0dcaf0; text-decoration:none;">Health Tips</a></li>
-            <li><a href="about.html" style="color:#0dcaf0; text-decoration:none;">About</a></li>
-            <li><a href="faq.html" style="color:#0dcaf0; text-decoration:none;">FAQ</a></li>
-            <li><a href="feedback.html" style="color:#0dcaf0; text-decoration:none;">Feedback</a></li>
-            <li><a href="login.html" style="color:#0dcaf0; text-decoration:none;">Login</a></li>
-            <li><a href="privacy.html" style="color:#0dcaf0; text-decoration:none;">Privacy Policy</a></li>
-            <li><a href="contact.html" style="color:#0dcaf0; text-decoration:none;">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Welcome Section -->
-    <div class="header">
-        <h1>Welcome to the BMI Calculator</h1>
-        <hr>
-        <p>Calculate your Body Mass Index (BMI) to assess your weight status.</p>
-        <a href="#calculator"><button class="btn">Go to BMI Calculator</button></a><br><br>
-        <a href="https://en.wikipedia.org/wiki/Body_mass_index" target="_blank">Learn more about BMI</a>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#calculator">BMI Calculator</a>
+    <a href="more on bmi.html">More on BMI</a>
+    <a href="healthtip.html">Health Tips</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="login.html">Login</a>
+    <a href="privacypolicy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Welcome Section -->
+  <div class="header">
+    <h1>Welcome to the BMI Calculator</h1>
+    <hr>
+    <p>Calculate your Body Mass Index (BMI) to assess your weight status.</p>
+    <a href="#calculator"><button class="btn">Go to BMI Calculator</button></a><br><br>
+    <a href="https://en.wikipedia.org/wiki/Body_mass_index" target="_blank">Learn more about BMI</a>
+  </div>
+
+  <!-- BMI Calculator Section -->
+  <div class="container text-center" id="calculator">
+    <h2>BMI Calculator</h2>
+    <div class="form-group">
+      <input type="number" placeholder="Weight in kg">
+      <input type="number" placeholder="Height in meters">
+      <input type="number" placeholder="Age">
+      <select>
+        <option value="">Select Sex</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
     </div>
+    <button class="btn">Calculate BMI</button>
+    <h3>Your BMI will appear here</h3>
+  </div>
 
-    
-    <!-- BMI Calculator Section -->
-    <div class="container text-center" id="calculator">
-        <h2>BMI Calculator</h2>
-        <div class="form-group">
-            <input type="number" placeholder="Weight in kg">
-            <input type="number" placeholder="Height in meters">
-            <input type="number" placeholder="Age">
-            <select>
-                <option value="">Select Sex</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-        </div>
-        <button class="btn" disabled>Calculate BMI (Static)</button>
-        <h3>Your BMI will appear here</h3>
-    </div>
+  <!-- What is BMI Section -->
+  <div class="container text-center">
+    <h2>What is BMI?</h2>
+    <p>BMI, or Body Mass Index, is a measure that uses height and weight to assess whether a person has a healthy body weight for their height.</p>
+    <h3>Importance of BMI</h3>
+    <p>It helps assess health risks associated with being overweight or underweight.</p>
+  </div>
 
-    <!-- What is BMI Section -->
-    <div class="container text-center">
-        <h2>What is BMI?</h2>
-        <p>BMI, or Body Mass Index, is a measure that uses height and weight to assess whether a person has a healthy body weight for their height.</p>
-        <h3>Importance of BMI</h3>
-        <p>It helps assess health risks associated with being overweight or underweight.</p>
-    </div>
+  <!-- Risks Section -->
+  <div class="container text-center">
+    <h2>Risks of Being Overweight or Underweight</h2>
+    <h3>Underweight Risks:</h3>
+    <ul>
+      <li>Malnutrition</li>
+      <li>Weakened immune system</li>
+      <li>Osteoporosis</li>
+      <li>Fertility issues</li>
+    </ul>
+  </div>
 
-    <!-- Risks Section -->
-    <div class="container text-center">
-        <h2>Risks of Being Overweight or Underweight</h2>
-
-        <h3>Underweight Risks:</h3>
-        <ul>
-            <li>Malnutrition</li>
-            <li>Weakened immune system</li>
-            <li>Osteoporosis</li>
-            <li>Fertility issues</li>
-        </ul>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 BMI Calculator. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BMI Calculator. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
-
-
-
-
