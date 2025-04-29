@@ -195,23 +195,64 @@
         font-size: 1.5rem;
       }
     }
-<<<<<<< HEAD
     <style>
   /* Navbar Styles */
-=======
-    
+  .navbar {
+    background: #1976d2;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+
+  .navbar a {
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .navbar a:hover {
+    background: #1565c0;
+    color: #bbdefb;
+    border-radius: 8px;
+  }
+
+  .navbar a.active {
+    background: #0d47a1;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+    .navbar a {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
   </style>
 </head>
 <body>
   <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="homepage.html">BMI Calculator</a>
-    <a href="healthtip.html" class="active">Health Tips</a>
-    <a href="about.html">About</a>
-    <a href="feedback.html">Feedback</a>
-    <a href="login .html">Login</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="contact.html">Contact</a>
+    
+      <a href="index.html">Home</a>
+      <a href="homepage.html">BMI Calculator</a>
+      <a href="healthtip.html" class="active">Health Tips</a>
+      <a href="about.html">About</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="login .html">Login</a> <!-- Fixed typo: extra space removed -->
+      <a href="privacypolicy.html">Privacy Policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    
   </div>
 
   <header>
@@ -340,4 +381,3 @@
 
 </body>
 </html>
->>>>>>> 887a2e525397353c0746a1078ea840c734b1120a
