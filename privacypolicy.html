@@ -1,83 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BMI Calculator  Privacy Policy </title>
+  <title>Privacy Policy - BMI Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #ebf8ff, #ffffff);
-      color: #2c3e50;
+    .navbar {
+      background-color: #1e3a8a;
+      padding: 20px;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      transition: color 0.3s;
     }
-    header h1 {
-      font-size: 2.5rem;
-      color: #2b6cb0;
-      margin-bottom: 0.5rem;
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #cbd5e0;
     }
-    header p {
-      color: #4a5568;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    main {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    @media(min-width: 768px) {
-      main {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    .card {
-      background: white;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: box-shadow 0.3s ease;
-    }
-    .card:hover {
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-    .card h2 {
-      color: #2b6cb0;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-    .card p {
-      color: #4a5568;
-      line-height: 1.6;
-    }
-    .formula {
-      background: #ebf8ff;
-      font-family: monospace;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      display: inline-block;
-      margin-bottom: 1rem;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.875rem;
-      color: #718096;
-      padding: 2rem 1rem;
-    }
-    footer hr {
-      margin-bottom: 1rem;
-      border: none;
-      border-top: 1px solid #e2e8f0;
-    }
-    .heart {
-      color: #e53e3e;
-    }
-    </style>
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="homepage.html">BMI Calculator</a>
+    <a href="healthtip.html">Health Tips</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="login .html">Login</a>
+    <a href="privacypolicy.html" class="active">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-10 shadow-lg text-center">
+    <div class="container mx-auto px-6">
+      <h1 class="text-4xl font-bold mb-2">Privacy Policy</h1>
+      <p class="text-lg">Your privacy is important to us. Learn how we collect, use, and protect your information.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 fade-in">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+      <h2 class="text-2xl font-bold mb-4 text-purple-600">Information Collection</h2>
+      <p class="text-gray-700">We collect minimal information necessary for providing accurate BMI calculations and personalized advice. No sensitive personal data is collected without consent.</p>
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+      <h2 class="text-2xl font-bold mb-4 text-purple-600">Data Usage</h2>
+      <p class="text-gray-700">Your data is solely used for improving your experience on the BMI Calculator platform. We do not sell or share your information with third parties.</p>
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+      <h2 class="text-2xl font-bold mb-4 text-purple-600">Cookies</h2>
+      <p class="text-gray-700">Our site may use basic cookies to enhance functionality. You can choose to disable cookies via your browser settings without affecting major features.</p>
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+      <h2 class="text-2xl font-bold mb-4 text-purple-600">Security</h2>
+      <p class="text-gray-700">We implement strict measures to protect your information from unauthorized access and misuse.</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white py-8 mt-12 shadow-inner text-center">
+    <div class="container mx-auto px-6">
+      <p class="mb-4">&copy; 2025 BMI Calculator. All rights reserved.</p>
+      <div class="flex justify-center space-x-6">
+        <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Terms of Service</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

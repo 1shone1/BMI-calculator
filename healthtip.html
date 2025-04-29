@@ -57,15 +57,42 @@
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
     .tip-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
+
+    .tip-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #1976d2;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .tip-card:hover::after {
+      transform: scaleX(1);
+    }
+
     .tip-card h3 {
       color: #1976d2;
       margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #e3f2fd;
+      border-left: 4px solid #1976d2;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 0 8px 8px 0;
     }
 
     /* BMI Mechanism */
@@ -137,11 +164,38 @@
       color: white;
     }
 
+    .quick-tips {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+
+    .quick-tips h3 {
+      color: #1976d2;
+      margin-bottom: 15px;
+    }
+
+    .quick-tips ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .quick-tips li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .quick-tips li:last-child {
+      border-bottom: none;
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 1.5rem;
       }
     }
+    
   </style>
 </head>
 <body>
@@ -151,8 +205,9 @@
     <a href="healthtip.html" class="active">Health Tips</a>
     <a href="about.html">About</a>
     <a href="feedback.html">Feedback</a>
-    <a href="login.html">Login</a>
+    <a href="login .html">Login</a>
     <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
   </div>
 
   <header>
@@ -164,39 +219,109 @@
     <h2 class="section-title">Health Tips</h2>
     <div class="tips-grid">
       <div class="tip-card">
-        <h3>Stay Active</h3>
-        <p>Exercise regularly, even light walking 30 minutes a day can make a big difference!</p>
+        <h3>Nutrition & Diet</h3>
+        <div class="highlight">
+          <p>A balanced diet is key to maintaining a healthy BMI.</p>
+        </div>
+        <ul>
+          <li>Eat plenty of fruits and vegetables daily</li>
+          <li>Choose whole grains over refined grains</li>
+          <li>Include lean proteins in your meals</li>
+          <li>Limit processed foods and added sugars</li>
+          <li>Stay hydrated with water throughout the day</li>
+        </ul>
       </div>
+
       <div class="tip-card">
-        <h3>Eat Balanced Meals</h3>
-        <p>Include fruits, vegetables, proteins, and whole grains in your meals daily.</p>
+        <h3>Exercise & Activity</h3>
+        <div class="highlight">
+          <p>Aim for at least 150 minutes of moderate exercise weekly.</p>
+        </div>
+        <ul>
+          <li>Start with 30 minutes of walking daily</li>
+          <li>Include strength training 2-3 times per week</li>
+          <li>Try different activities to stay motivated</li>
+          <li>Listen to your body and rest when needed</li>
+          <li>Make exercise a social activity</li>
+        </ul>
       </div>
+
       <div class="tip-card">
-        <h3>Stay Hydrated</h3>
-        <p>Drinking water helps control appetite and supports body functions.</p>
+        <h3>Sleep & Recovery</h3>
+        <div class="highlight">
+          <p>Quality sleep is essential for overall health and weight management.</p>
+        </div>
+        <ul>
+          <li>Aim for 7-9 hours of sleep nightly</li>
+          <li>Maintain a consistent sleep schedule</li>
+          <li>Create a relaxing bedtime routine</li>
+          <li>Limit screen time before bed</li>
+          <li>Keep your bedroom cool and dark</li>
+        </ul>
       </div>
+
       <div class="tip-card">
-        <h3>Get Enough Sleep</h3>
-        <p>Proper sleep helps maintain metabolism and lowers stress.</p>
+        <h3>Stress Management</h3>
+        <div class="highlight">
+          <p>Managing stress is crucial for maintaining a healthy lifestyle.</p>
+        </div>
+        <ul>
+          <li>Practice deep breathing exercises</li>
+          <li>Try meditation or mindfulness</li>
+          <li>Stay connected with friends and family</li>
+          <li>Take regular breaks during work</li>
+          <li>Engage in hobbies you enjoy</li>
+        </ul>
       </div>
+
       <div class="tip-card">
-        <h3>Track Progress</h3>
-        <p>Regularly monitor your BMI and weight to stay on the right track.</p>
+        <h3>Progress Tracking</h3>
+        <div class="highlight">
+          <p>Regular monitoring helps you stay on track with your health goals.</p>
+        </div>
+        <ul>
+          <li>Track your BMI changes monthly</li>
+          <li>Keep a food and exercise journal</li>
+          <li>Set realistic, achievable goals</li>
+          <li>Celebrate small victories</li>
+          <li>Adjust your plan as needed</li>
+        </ul>
       </div>
     </div>
+
+    <div class="quick-tips">
+      <h3>Quick Health Tips</h3>
+      <ul>
+        <li>🍎 Start your day with a healthy breakfast</li>
+        <li>💧 Keep a water bottle with you at all times</li>
+        <li>🚶 Take the stairs instead of the elevator</li>
+        <li>🥗 Fill half your plate with vegetables</li>
+        <li>😴 Set a consistent bedtime routine</li>
+        <li>🧘 Take 5-minute breaks for stretching</li>
+        <li>📱 Limit screen time before bed</li>
+        <li>🥤 Replace sugary drinks with water or herbal tea</li>
+      </ul>
+    </div>
+
     <div class="mechanism">
-      <h3>How BMI Works</h3>
+      <h3>Understanding Your BMI</h3>
+      <div class="highlight">
+        <p>BMI is a simple way to check if your weight is healthy for your height.</p>
+      </div>
       <p>
-        BMI (Body Mass Index) is a number calculated using your weight and height:
-        <strong>BMI = weight (kg) / height² (m²)</strong>.  
-        It helps categorize your body status:  
-        <ul>
-          <li>Underweight: BMI &lt; 18.5</li>
-          <li>Normal: 18.5 – 24.9</li>
-          <li>Overweight: 25 – 29.9</li>
-          <li>Obese: BMI ≥ 30</li>
-        </ul>
+        BMI (Body Mass Index) is calculated using your weight and height:
+        <strong>BMI = weight (kg) / height² (m²)</strong>
       </p>
+      <p>BMI Categories:</p>
+      <ul>
+        <li>Underweight: BMI &lt; 18.5</li>
+        <li>Normal: 18.5 – 24.9</li>
+        <li>Overweight: 25 – 29.9</li>
+        <li>Obese: BMI ≥ 30</li>
+      </ul>
+      <div class="highlight">
+        <p>Remember: BMI is a screening tool, not a diagnostic tool. Consult with healthcare professionals for personalized advice.</p>
+      </div>
     </div>
     <footer>
       <p>&copy; 2025 BMI Calculator. All rights reserved. | <a href="#">Privacy Policy</a></p>
