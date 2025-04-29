@@ -1,0 +1,133 @@
+
+    /* Reset + Fonts */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f4f9ff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #1976d2;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .navbar a:hover {
+      background: #1565c0;
+      color: #bbdefb;
+      border-radius: 8px;
+    }
+
+    .navbar a.active {
+      background: #0d47a1;
+      border-radius: 8px;
+    }
+
+    /* Header */
+    header {
+      background: #1976d2;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    /* Section */
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #1976d2;
+    }
+
+    .poses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .pose-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .pose-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .pose-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .pose-card h3 {
+      color: #1976d2;
+      margin-bottom: 10px;
+    }
+     /* Footer */
+     footer {
+        background: #1976d2;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+        margin-top: 40px;
+      }
+  
+      footer a {
+        color: #bbdefb;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+  
+      footer a:hover {
+        color: white;
+      }
+  
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+      }
+  
+    
+
+    

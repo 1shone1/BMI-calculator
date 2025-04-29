@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BMI Calculator Login</title>
-  <link rel="stylesheet" href="nav.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -19,18 +21,40 @@
       flex-direction: column;
       align-items: center;
       padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background-color: #1e3a8a;
+      padding: 20px;
+      font-size: 18px; /* Correct text size */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Added shadow */
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #cbd5e0; /* light gray on hover */
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: #1e3a8a;
-      margin-bottom: 30px;
+      margin: 30px 0;
       text-shadow: 1px 1px 2px #ccc;
+      text-align: center;
     }
+
     .card {
       background-color: white;
       border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
       padding: 30px;
       max-width: 400px;
       width: 100%;
@@ -38,8 +62,8 @@
     }
 
     .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 12px 28px rgba(128, 90, 213, 0.4);
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(100, 100, 255, 0.3);
     }
 
     .input-group {
@@ -54,8 +78,9 @@
     }
 
     .input-group:hover {
-      border-color: #a78bfa;
+      border-color: #7c3aed;
     }
+
     .input-group input {
       border: none;
       background: transparent;
@@ -85,12 +110,13 @@
     .section {
       background-color: white;
       border-radius: 20px;
-      margin-top: 40px;
+      margin-top: 50px;
       padding: 30px;
       max-width: 700px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
       text-align: center;
-      border-top: 5px solid #a78bfa;
+      border-top: 5px solid #7c3aed;
     }
 
     .section h2 {
@@ -105,41 +131,6 @@
       line-height: 1.6;
     }
 
-    .team {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      margin-top: 50px;
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    .member {
-      background-color: white;
-      border-radius: 16px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-top: 4px solid #3b82f6;
-    }
-    .member:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .member h4 {
-      font-size: 1.1rem;
-      margin-bottom: 5px;
-      color: #111827;
-    }
-
-    .member p {
-      font-size: 0.9rem;
-      color: #6b7280;
-      font-style: italic;
-    }
-
     footer {
       margin-top: 60px;
       text-align: center;
@@ -150,6 +141,7 @@
       max-width: 800px;
       width: 100%;
     }
+
     @media (max-width: 500px) {
       h1 {
         font-size: 2.2rem;
@@ -161,16 +153,21 @@
     }
   </style>
 </head>
+
 <body>
+
+  <div class="navbar">
+   <!-- Navbar -->
   <div class="navbar">
     <a href="index.html">Home</a>
     <a href="homepage.html">BMI Calculator</a>
     <a href="healthtip.html">Health Tips</a>
-    <a href="about.html">About</a>
+    <a href="about.html" class="active">About</a>
     <a href="feedback.html">Feedback</a>
-    <a href="login .html" class="active">Login</a>
-    <a href="privacy.html">Privacy Policy</a>
+    <a href="login .html">Login</a>
+    <a href="privacypolicy.html">Privacy Policy</a>
     <a href="contact.html">Contact</a>
+  </div>
   </div>
 
   <h1>BMI Calculator Login</h1>
@@ -190,7 +187,14 @@
     <p>
       BMI (Body Mass Index) is calculated using the formula:
       <strong>weight (kg) / [height (m)]²</strong>. Enter your height and weight
-      in the calculator to determine your BMI and know if you're underweight,
-      normal, overweight, or obese.
+      in the calculator to determine your BMI and understand your health status.
     </p>
   </div>
+
+  <footer>
+    &copy; 2025 BMI Calculator. All rights reserved.
+  </footer>
+
+</body>
+
+</html>
