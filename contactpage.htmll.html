@@ -1,170 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BMI Calculator - Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - BMI Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #cfe9ff, #a3d1ff);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: transparent;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #1e3a8a;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      color: #2563eb;
-      font-size: 1.1rem;
-    }
-
-    main {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    @media (min-width: 768px) {
-      main {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .card {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card p {
-      color: #1e293b;
-      line-height: 1.6;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    input, textarea, button {
-      padding: 0.75rem 1rem;
-      border-radius: 0.5rem;
-      border: 1px solid #cbd5e1;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-    }
-
-    button {
-      background-color: #2563eb;
-      color: white;
-      cursor: pointer;
-      border: none;
-    }
-
-    button:hover {
-      background-color: #1e40af;
-    }
-
-    footer {
+    .navbar {
       background-color: #1e3a8a;
+      padding: 20px;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar a {
       color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      margin-top: auto;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #cbd5e0;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Contact Us</h1>
-    <p>Have questions about the BMI Calculator? We'd love to hear from you.</p>
-  </header>
 
-  <main>
-    <!-- Contact Form -->
-    <div class="card">
-      <h2>Send a Message</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="homepage.html">BMI Calculator</a>
+    <a href="healthtip.html">Health Tips</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="login.html">Login</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+
+  <!-- Contact Section -->
+  <main class="container mx-auto p-6 flex-1">
+
+    <div class="bg-white rounded-2xl shadow-lg p-8 mt-10">
+
+      <h1 class="text-4xl font-bold text-center text-blue-700 mb-8">Contact Us</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">Email</h3>
+          <p class="text-gray-700">support@bmicalculator.com</p>
+        </div>
+        <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">Phone</h3>
+          <p class="text-gray-700">xxxxx - xxxxx</p>
+        </div>
+        <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">Address</h3>
+          <p class="text-gray-700">Chitkara University<br>Rajpura, Punjab</p>
+        </div>
+      </div>
+
+      <div class="max-w-2xl mx-auto">
+        <form action="/submit" method="POST" class="space-y-6">
+          <div>
+            <label for="name" class="block text-blue-700 mb-1">Name</label>
+            <input type="text" id="name" name="name" required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+          </div>
+
+          <div>
+            <label for="email" class="block text-blue-700 mb-1">Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+          </div>
+
+          <div>
+            <label for="subject" class="block text-blue-700 mb-1">Subject</label>
+            <input type="text" id="subject" name="subject" required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+          </div>
+
+          <div>
+            <label for="message" class="block text-blue-700 mb-1">Message</label>
+            <textarea id="message" name="message" rows="5" required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit"
+              class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-md transition">Send
+              Message</button>
+          </div>
+        </form>
+      </div>
+
     </div>
 
-    <!-- How It Works -->
-    <div class="card">
-      <h2>How the BMI Calculator Works</h2>
-      <p>
-        BMI (Body Mass Index) is a simple formula that helps assess if you are underweight, normal, overweight, or obese.
-      </p>
-      <p style="font-style: italic; color: #2563eb;">
-        BMI = weight (kg) / height (m)<sup>2</sup>
-      </p>
-      <p>
-        It's a general indicator of health and should be complemented by professional medical advice for a complete assessment.
-      </p>
-    </div>
-
-    <!-- Health Tips -->
-    <div class="card">
-      <h2>Health Tips</h2>
-      <ul style="list-style-type: none; padding: 0;">
-        <li style="margin-bottom: 1rem; padding: 1rem; background: #f0f9ff; border-radius: 0.5rem;">
-          <strong>Stay Hydrated</strong>
-          <p style="margin: 0.5rem 0 0 0;">Drink at least 8 glasses of water daily to maintain proper body function.</p>
-        </li>
-        <li style="margin-bottom: 1rem; padding: 1rem; background: #f0f9ff; border-radius: 0.5rem;">
-          <strong>Regular Exercise</strong>
-          <p style="margin: 0.5rem 0 0 0;">Aim for 30 minutes of moderate physical activity most days of the week.</p>
-        </li>
-        <li style="margin-bottom: 1rem; padding: 1rem; background: #f0f9ff; border-radius: 0.5rem;">
-          <strong>Balanced Diet</strong>
-          <p style="margin: 0.5rem 0 0 0;">Include fruits, vegetables, whole grains, and lean proteins in your meals.</p>
-        </li>
-        <li style="padding: 1rem; background: #f0f9ff; border-radius: 0.5rem;">
-          <strong>Sleep Well</strong>
-          <p style="margin: 0.5rem 0 0 0;">Get 7-9 hours of quality sleep each night for optimal health.</p>
-        </li>
-      </ul>
-    </div>
   </main>
-  <footer>
-    <p>&copy; <span id="year"></span> BMI Calculator. All rights reserved.</p>
-    <p>Made with 💙 to help you live healthier</p>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center p-6 mt-12">
+    <p>&copy; 2025 BMI Calculator. All rights reserved.</p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
+
 </html>

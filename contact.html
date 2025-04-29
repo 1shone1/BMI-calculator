@@ -1,138 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - BMI Calculator</title>
-    <link rel="stylesheet" href="nav.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f8f9fa;
-        }
-        .contact-container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-top: 20px;
-        }
-        h1 {
-            color: #1e3a8a;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .info-card {
-            background: #f1f5f9;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .info-card h3 {
-            color: #1e3a8a;
-            margin-bottom: 10px;
-        }
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #1e3a8a;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        button {
-            background: #1e3a8a;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s ease;
-        }
-        button:hover {
-            background: #1e40af;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - BMI Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+
+  <style>
+    .navbar {
+      background-color: #1e3a8a;
+      padding: 20px;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #cbd5e0;
+    }
+  </style>
 </head>
-<body>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="homepage.html">BMI Calculator</a>
-        <a href="healthtip.html">Health Tips</a>
-        <a href="about.html">About</a>
-        <a href="feedback.html">Feedback</a>
-        <a href="login .html">Login</a>
-        <a href="privacypolicy.html">Privacy Policy</a>
-        <a href="contact.html" class="active">Contact</a>
+
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="homepage.html">BMI Calculator</a>
+    <a href="healthtip.html">Health Tips</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="login.html">Login</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+
+  <!-- Contact Section -->
+  <main class="container mx-auto p-6 flex-1">
+
+    <div class="bg-white rounded-2xl shadow-lg p-8 mt-10">
+
+      <h1 class="text-4xl font-bold text-center text-blue-700 mb-8">Contact Us</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">Email</h3>
+          <p class="text-gray-700">support@bmicalculator.com</p>
+        </div>
+        <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">Phone</h3>
+          <p class="text-gray-700">xxxxx - xxxxx</p>
+        </div>
+        <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">Address</h3>
+          <p class="text-gray-700">Chitkara University<br>Rajpura, Punjab</p>
+        </div>
+      </div>
+
+      <div class="max-w-2xl mx-auto">
+        <form action="/submit" method="POST" class="space-y-6">
+          <div>
+            <label for="name" class="block text-blue-700 mb-1">Name</label>
+            <input type="text" id="name" name="name" required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+          </div>
+
+          <div>
+            <label for="email" class="block text-blue-700 mb-1">Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+          </div>
+
+          <div>
+            <label for="subject" class="block text-blue-700 mb-1">Subject</label>
+            <input type="text" id="subject" name="subject" required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+          </div>
+
+          <div>
+            <label for="message" class="block text-blue-700 mb-1">Message</label>
+            <textarea id="message" name="message" rows="5" required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit"
+              class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-md transition">Send
+              Message</button>
+          </div>
+        </form>
+      </div>
+
     </div>
 
-    <div class="contact-container">
-        <h1>Contact Us</h1>
-        
-        <div class="contact-info">
-            <div class="info-card">
-                <h3>Email</h3>
-                <p>support@bmicalculator.com</p>
-            </div>
-            <div class="info-card">
-                <h3>Phone</h3>
-                <p> xxxxx - xxxxx</p>
-            </div>
-            <div class="info-card">
-                <h3>Address</h3>
-                <p>chitkara university <br> Rajpura, Punjab
-                </p>
-            </div>
-        </div>
+  </main>
 
-        <div class="contact-form">
-            <form action="/submit" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center p-6 mt-12">
+    <p>&copy; 2025 BMI Calculator. All rights reserved.</p>
+  </footer>
+
 </body>
-</html> 
+
+</html>
