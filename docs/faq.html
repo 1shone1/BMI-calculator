@@ -1,147 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator - Frequently Asked Questions</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator - Frequently Asked Questions</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .navbar {
+      background-color: #1e3a8a;
+      padding: 20px;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
 
-        .faq-header {
-            text-align: center;
-            padding: 40px 0;
-            background-color: #2c3e50;
-            color: white;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
+    .navbar a:hover {
+      color: #cbd5e0;
+    }
 
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease;
-        }
-
-        .faq-item:hover {
-            transform: translateY(-2px);
-        }
-
-        .question {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-
-        .answer {
-            color: #555;
-        }
-
-        .back-to-calculator {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 24px;
-            background-color: #2c3e50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-to-calculator:hover {
-            background-color: #34495e;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            .faq-header {
-                padding: 20px 0;
-            }
-
-            .question {
-                font-size: 1.1em;
-            }
-        }
-    </style>
+    .active {
+      border-bottom: 2px solid #cbd5e0;
+      padding-bottom: 5px;
+    }
+  </style>
 </head>
-<body>
-    <div class="faq-header">
-        <h1>BMI Calculator FAQ</h1>
-        <p>Frequently Asked Questions about BMI Calculation and Usage</p>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="homepage.html">BMI Calculator</a>
+    <a href="healthtip.html">Health Tips</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="login.html">Login</a>
+    <a href="privacypolicy.html">Privacy Policy</a>
+    <a href="faq.html" class="active">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-6 shadow-lg">
+    <div class="container mx-auto px-6">
+      <h1 class="text-3xl font-bold">BMI Calculator FAQ</h1>
+      <p class="text-lg mt-2">Frequently Asked Questions about BMI Calculation and Usage</p>
     </div>
+  </header>
 
-    <div class="faq-container">
-        <div class="faq-item">
-            <div class="question">What is BMI?</div>
-            <div class="answer">
-                BMI (Body Mass Index) is a simple measurement using your weight and height to work out if your weight is healthy. The BMI calculation divides an adult's weight in kilograms by their height in meters squared.
-            </div>
-        </div>
+  <!-- FAQ Section -->
+  <section class="container mx-auto px-6 py-12">
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+      
+      <div class="faq-item mb-8">
+        <h2 class="text-xl font-bold mb-4 text-blue-700">What is BMI?</h2>
+        <p class="text-gray-700">
+          BMI (Body Mass Index) is a simple measurement using your weight and height to work out if your weight is healthy. 
+          The BMI calculation divides an adult's weight in kilograms by their height in meters squared.
+        </p>
+      </div>
 
-        <div class="faq-item">
-            <div class="question">How is BMI calculated?</div>
-            <div class="answer">
-                BMI is calculated using the formula: BMI = weight (kg) ÷ height² (m²). For example, if you weigh 70kg and are 1.75m tall, your BMI would be 70 ÷ (1.75 × 1.75) = 22.9.
-            </div>
-        </div>
+      <div class="faq-item mb-8">
+        <h2 class="text-xl font-bold mb-4 text-blue-700">How is BMI calculated?</h2>
+        <p class="text-gray-700">
+          BMI is calculated using the formula: BMI = weight (kg) ÷ height² (m²). For example, if you weigh 70kg and are 1.75m tall, 
+          your BMI would be 70 ÷ (1.75 × 1.75) = 22.9.
+        </p>
+      </div>
 
-        <div class="faq-item">
-            <div class="question">What are the BMI categories?</div>
-            <div class="answer">
-                The standard BMI categories for adults are:<br>
-                • Underweight: Below 18.5<br>
-                • Normal weight: 18.5 to 24.9<br>
-                • Overweight: 25 to 29.9<br>
-                • Obese: 30 or greater
-            </div>
-        </div>
+      <div class="faq-item mb-8">
+        <h2 class="text-xl font-bold mb-4 text-blue-700">What are the BMI categories?</h2>
+        <p class="text-gray-700">
+          The standard BMI categories for adults are:<br>
+          • Underweight: Below 18.5<br>
+          • Normal weight: 18.5 to 24.9<br>
+          • Overweight: 25 to 29.9<br>
+          • Obese: 30 or greater
+        </p>
+      </div>
 
-        <div class="faq-item">
-            <div class="question">Is BMI accurate for everyone?</div>
-            <div class="answer">
-                BMI is not a perfect measure as it doesn't account for factors like muscle mass, bone density, age, sex, ethnicity, and body composition. Athletes or muscular individuals might have a high BMI but not be overweight. It's best to use BMI as one of several indicators of health.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="question">How often should I check my BMI?</div>
-            <div class="answer">
-                It's recommended to check your BMI whenever there are significant changes in your weight or every 6-12 months as part of your regular health check-up. However, rapid or frequent changes in BMI should be discussed with a healthcare provider.
-            </div>
-        </div>
+      <div class="faq-item mb-8">
+        <h2 class="text-xl font-bold mb-4 text-blue-700">Is BMI accurate for everyone?</h2>
+        <p class="text-gray-700">
+          BMI is not a perfect measure as it doesn't account for factors like muscle mass, bone density, age, sex, ethnicity, and body composition. 
+          Athletes or muscular individuals might have a high BMI but not be overweight. It's best to use BMI as one of several indicators of health.
+        </p>
+      </div>
 
-        <div class="faq-item">
-            <div class="question">Can children use this BMI calculator?</div>
-            <div class="answer">
-                This calculator is designed for adults. Children and teens should use a specific BMI calculator that takes into account their age and gender, as their body composition changes significantly during development. Please consult a pediatrician for children's BMI assessment.
-            </div>
-        </div>
+      <div class="faq-item mb-8">
+        <h2 class="text-xl font-bold mb-4 text-blue-700">How often should I check my BMI?</h2>
+        <p class="text-gray-700">
+          It's recommended to check your BMI whenever there are significant changes in your weight or every 6–12 months as part of your regular health check-up. 
+          However, rapid or frequent changes in BMI should be discussed with a healthcare provider.
+        </p>
+      </div>
 
-        <a href="index.html" class="back-to-calculator">Back to Calculator</a>
+      <div class="faq-item mb-8">
+        <h2 class="text-xl font-bold mb-4 text-blue-700">Can children use this BMI calculator?</h2>
+        <p class="text-gray-700">
+          This calculator is designed for adults. Children and teens should use a specific BMI calculator that takes into account their age and gender, 
+          as their body composition changes significantly during development. Please consult a pediatrician for children's BMI assessment.
+        </p>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="index.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+          Back to Calculator
+        </a>
+      </div>
+
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white py-8 mt-12 shadow-inner">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2025 BMI Calculator. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="privacypolicy.html" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Terms of Service</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
